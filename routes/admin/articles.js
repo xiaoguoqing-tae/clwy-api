@@ -33,9 +33,9 @@ router.get('/', async function (req, res, next) {
       }
     }
     const { count, rows: articles } = await Article.findAndCountAll(condition)
-    success(res, '查询文字列表成功', { articles, count, currentPage, pageSize })
+    success(res, '查询文章列表成功', { articles, count, currentPage, pageSize })
   } catch (error) {
-    failure(res, error, '查询文字列表失败')
+    failure(res, error, '查询文章列表失败')
   }
 });
 
